@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { memo } from 'react'
 
-function App() {
+
+// 布局路由
+import PmoLayout from './router-layout';
+import PmoAppHeader from './components/app-header';
+import PmoAppFooter from './components/app-footer';
+
+const App = memo(() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <PmoAppHeader />
+      <PmoLayout></PmoLayout>
+      <PmoAppFooter />
     </div>
-  );
-}
+  )
+})
 
 export default App;

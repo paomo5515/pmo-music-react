@@ -1,0 +1,106 @@
+.header {
+  height: 75px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 75px;
+  background-color: #242424;
+  .content {
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      .logo {
+        display: block;
+        width: 176px;
+        height: 69px;
+        background-position: 0 0;
+        text-indent: -9999px;
+      }
+      .headerList {
+        display: flex;
+        line-height: 70px;
+        .item {
+          position: relative;
+          a {
+            display: block;
+            padding: 0 20px;
+            color: #ccc;
+          }
+          &:last-of-type a {
+            position: relative;
+            &:after {
+              position: absolute;
+              content: "";
+              width: 28px;
+              height: 19px;
+              background-image: url("../../assets/img/sprite_01.png");
+              background-position: -190px 0;
+              top: 20px;
+              right: -15px;
+            }
+          }
+
+          &:hover a,
+          a.active {
+            color: #fff;
+            background-color: #000;
+            text-decoration: none;
+          }
+
+          :global {
+            .active .icon {
+              background-color: rgb(219, 28, 28);
+              position: absolute;
+              display: inline-block;
+              width: 12px;
+              height: 7px;
+              bottom: -1px;
+              left: 50%;
+              transform: translate(-50%, 0);
+              background-position: -226px 0;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      :global {
+        .rightSearch {
+          width: 158px;
+          height: 32px;
+          border-radius: 16px;
+          input {
+            &::placeholder {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .author {
+        width: 90px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        border: 1px solid #666;
+        border-radius: 16px;
+        margin: 0 16px;
+        background-color: transparent;
+        color: #ccc;
+      }
+      .login {
+        background-color: transparent;
+        color: #ccc;
+      }
+    }
+  }
+  .divier {
+    height: 5px;
+    background-color: #c20c0c;
+  }
+}

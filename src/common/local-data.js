@@ -1,7 +1,7 @@
 export const headerLinks = [
   {
     title: "发现音乐",
-    link: "/discover"
+    link: "/discover/"
   },
   {
     title: "我的音乐",
@@ -60,6 +60,9 @@ export const footerImages = [
   },
   {
     link: "https://music.163.com/uservideo#/plan"
+  },
+  {
+    link: "#"
   }
 ]
 
@@ -67,7 +70,7 @@ export const footerImages = [
 export const dicoverMenu = [
   {
     title: "推荐",
-    link: "/discover/recommend"
+    link: "discover/"
   },
   {
     title: "排行榜",

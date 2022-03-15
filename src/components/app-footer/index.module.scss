@@ -1,0 +1,102 @@
+.foo {
+  // margin-top: 600px;
+  width: 100%;
+  border-top: 1px solid #d3d3d3;
+  height: 130px;
+  .footer {
+    display: flex;
+    .copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 520px;
+      height: 91px;
+      .link {
+        display: flex;
+        justify-content: space-around;
+
+        .border {
+          border-left: 2px solid rgb(58, 58, 58);
+          height: 16px;
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+      .info {
+        color: #666;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .filing {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .right {
+      width: 460px;
+      height: 91px;
+      display: flex;
+      // align-items: center;
+      margin-top: 10px;
+
+      :global {
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 40px;
+          .link {
+            display: block;
+            width: 50px;
+            height: 45px;
+
+            background-image: url("../../assets/img/sprite_footer_02.png");
+            background-size: 110px 450px;
+          }
+
+          &:nth-child(1) .link {
+            background-position: -60px -101px;
+          }
+          &:nth-child(2) .link {
+            background-position: 0 0;
+          }
+          &:nth-child(3) .link {
+            background-position: -60px -50px;
+          }
+          &:nth-child(4) .link {
+            background-position: 0 -101px;
+          }
+          &:nth-child(5) .link {
+            background-position: -0 -50px;
+          }
+          .title {
+            margin-top: 5px;
+            display: block;
+            width: 52px;
+            height: 10px;
+            background-image: url("../../assets/img/sprite_footer_01.png");
+            background-size: 180px 100px;
+          }
+
+          &:nth-child(1) .title {
+            background-position: -1px -90px;
+          }
+          &:nth-child(2) .title {
+            background-position: 0 0;
+            margin-top: 7px;
+          }
+          &:nth-child(3) .title {
+            background-position: 0 -54px;
+            margin-top: 6px;
+          }
+
+          &:nth-child(4) .title {
+            background-position: -1px -72px;
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+}

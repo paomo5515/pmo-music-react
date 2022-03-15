@@ -1,0 +1,167 @@
+.wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52px;
+  background-position: 0 0;
+  background-repeat: repeat;
+  .playContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 47px;
+  }
+}
+.control {
+  display: flex;
+  align-items: center;
+
+  .prev,
+  .next {
+    width: 28px;
+    height: 28px;
+  }
+
+  .prev {
+    background-position: 0 -130px;
+  }
+
+  .play {
+    width: 36px;
+    height: 36px;
+    margin: 0 8px;
+    background-position: 0 -165px;
+  }
+
+  .next {
+    background-position: -80px -130px;
+  }
+}
+
+.playinfo {
+  // margin-left: -120px;
+  display: flex;
+  width: 581px;
+  align-items: center;
+
+  .image {
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+  }
+
+  .info {
+    flex: 1;
+    color: #a1a1a1;
+    margin-left: 10px;
+    height: 47px;
+    margin-top: 8px;
+    .song {
+      color: #e1e1e1;
+      display: flex;
+
+      .singerName {
+        color: #a1a1a1;
+        margin-left: 12px;
+      }
+    }
+
+    .progress {
+      display: flex;
+      align-items: center;
+      height: 14px;
+      margin-top: 3px;
+      :global {
+        .ant-slider {
+          width: 466px;
+          top: -2px;
+          // margin-right: 10px;
+          margin: 0;
+          .ant-slider-rail {
+            height: 9px;
+            background: url("../../../assets/img/progress_bar.png") right 0;
+          }
+
+          .ant-slider-track {
+            height: 9px;
+            background: url("../../../assets/img/progress_bar.png") left -66px;
+          }
+
+          .ant-slider-handle {
+            width: 22px;
+            height: 24px;
+            border: none;
+            margin-top: -7px;
+            background: url("../../../assets/img/sprite_icon.png") 0 -250px;
+          }
+        }
+      }
+
+      // 时间
+      .time {
+        display: block;
+        margin-left: 14px;
+        .nowTime {
+          color: #e1e1e1;
+        }
+        .divider {
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+}
+
+.operator {
+  display: flex;
+  position: relative;
+  top: 5px;
+  .btn {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .favor {
+    background-position: -88px -163px;
+  }
+
+  .share {
+    background-position: -114px -163px;
+  }
+  .right {
+    width: 126px;
+    padding-left: 13px;
+    background-position: -147px -248px;
+
+    .volume {
+      background-position: -2px -248px;
+    }
+
+    /* .loop {
+      background-position: ${props => {
+        switch(props.sequence) {
+          case 1:
+            return "-66px -248px"
+          case 2:
+            return "-66px -344px"
+          default:
+            return "-3px -344px"
+        }
+      }};
+    } */
+
+    // .loop {
+    //   background-position: -3px -344px;
+    // }
+    .playlist {
+      width: 59px;
+      background-position: -42px -68px;
+    }
+  }
+}

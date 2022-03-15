@@ -1,0 +1,47 @@
+.wrapper {
+  .page {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .connect {
+    height: 186px;
+    background-color: #f5f5f5;
+    border: 1px solid #d3d3d3;
+    margin: 20px 0 37px;
+    display: flex;
+    align-items: center;
+    .album {
+      width: 687px;
+      overflow: hidden;
+      // background-color: lightblue;
+    }
+    .arrow {
+      width: 24px;
+      height: 25px;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: lightcoral;
+      }
+    }
+  }
+}
+
+:global {
+  .arrow-left {
+    // margin-left: 2px;
+    background-position: -260px -73px;
+  }
+
+  .arrow-right {
+    background-position: -298px -73px;
+  }
+  // antd样式
+  .ant-carousel .slick-slide {
+    // height: 150px;
+    overflow: hidden;
+  }
+}

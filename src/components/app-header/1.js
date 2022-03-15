@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom';
-import { Input } from 'antd'
-import { SearchOutlined } from '@ant-design/icons'
+
+import {Input} from 'antd'
 import { headerLinks } from '../../common/local-data';
 
-import styles from './index.module.scss'
+import './index.scss'
 const PmoAppHeader = memo(() => {
 
   const showSelectItem = (item, index) => {
@@ -22,15 +22,15 @@ const PmoAppHeader = memo(() => {
   }
 
   return (
-    <div className={styles.header}>
-      <div className={styles.content + " wrap-v1"}>
-        <div className={styles.left}>
-          <NavLink to='discover/' className={styles.logo + " sprite_01"}>网易云音乐</NavLink>
-          <div className={styles.headerList}>
+    <div className="header">
+      <div className="content wrap-v1">
+        <div className="left">
+          <NavLink to='/discover' className='logo sprite_01'>网易云音乐</NavLink>
+          <div className="headerList">
             {
               headerLinks.map((item, index) => {
                 return (
-                  <div key={item.title} className={styles.item}>
+                  <div key={item.title} className="item">
                     {showSelectItem(item, index)}
                   </div>
                 )
@@ -38,13 +38,11 @@ const PmoAppHeader = memo(() => {
             }
           </div>
         </div>
-        <div className={styles.right}>
-          <Input className="rightSearch" placeholder='音乐/视频/电台' prefix={<SearchOutlined />} />
-          <button className={styles.author}>创作者中心</button>
-          <button className={styles.login}>登录</button>
+        <div className="right">
+            <Input placeholder='音乐/视频/电台'/>
         </div>
       </div>
-      <div className={styles.divier}></div>
+      <div className="divier"></div>
     </div>
   )
 })

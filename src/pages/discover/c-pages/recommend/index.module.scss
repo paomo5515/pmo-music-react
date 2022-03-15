@@ -1,0 +1,20 @@
+.recommend {
+  .topbanner {
+    height: 280px;
+  }
+  .content {
+    // width: 100%;
+    background-color: #fff;
+    width: 980px;
+    display: flex;
+    .left {
+      padding: 20px;
+      width: 729px;
+    }
+    .right {
+      width: 250px;
+      border: 1px solid #d3d3d3;
+      border-width: 0 1px;
+    }
+  }
+}

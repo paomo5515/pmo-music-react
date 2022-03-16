@@ -1,19 +1,15 @@
-import React, { memo } from 'react'
-
+import React, { memo, Suspense } from 'react'
 
 // 布局路由
 import PmoLayout from './router-layout';
-// import PmoAppHeader from './components/app-header';
-// import PmoAppFooter from './components/app-footer';
 
 
 const App = memo(() => {
   return (
     <div className='app'>
-     {/*  <PmoAppHeader /> */}
-      <PmoLayout>
-      </PmoLayout>
-     
+      <Suspense fallback={<div>page loadIng</div>}>
+        <PmoLayout />
+      </Suspense>
     </div>
   )
 })

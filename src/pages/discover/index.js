@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 import { dicoverMenu } from '../../common/local-data';
 import styles from "./index.module.scss"
@@ -19,6 +19,7 @@ const PmoDiscover = memo(() => {
           })
         }
       </div>
+      <Outlet />
     </div>
   )
 })

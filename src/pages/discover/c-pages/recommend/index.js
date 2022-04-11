@@ -3,12 +3,11 @@ import PmoTopBanner from './c-cpns/top-banner';
 import PmoHotRecommend from './c-cpns/hot-recommemd';
 import PmoNewAlbum from './c-cpns/new-album';
 import PmoRcmdRanking from './c-cpns/rcmd-ranking';
-import PmoPlayer from '../../../player';
+import PmoUserLogin from './c-cpns/user-logon'
 import styles from './index.module.scss'
 const PmoRecommend = memo((props) => {
   return (
     <div className={styles.recommend}>
-
       <div className={styles.topbanner}>
         <PmoTopBanner />
       </div>
@@ -19,7 +18,7 @@ const PmoRecommend = memo((props) => {
           <PmoRcmdRanking />
         </div>
         <div className={styles.right}>
-          <PmoPlayer />
+          <PmoUserLogin />
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@ const PmoLayout = memo(() => {
           <Route path='discover/djradio' element={<PmoDjradio />} />
           <Route path='discover/artist' element={<PmoArtist />} />
           <Route path='discover/album' element={<PmoAlbum />} />
-          <Route path='*' element={<Navigate to="discover/" />} />
+          <Route path='/' element={<Navigate to="discover/" />} />
         </Route>
         <Route path='mine' element={<PmoMine />} />
         <Route path='friend' element={<PmoFriend />} />
